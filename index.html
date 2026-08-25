@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Anjammaa ❤️</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:Georgia,"Times New Roman",serif;
+    background:
+        radial-gradient(circle at top,#fff,#ffe9f0 45%,#f8d6e1);
+    color:#5a3040;
+    overflow-x:hidden;
+}
+
+.container{
+    width:92%;
+    max-width:680px;
+    margin:auto;
+    padding:30px 0;
+}
+
+.page{
+    display:none;
+    min-height:90vh;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    animation:pageIn .7s ease;
+}
+
+.page.active{
+    display:flex;
+}
+
+@keyframes pageIn{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.big-heart{
+    font-size:65px;
+    animation:heartbeat 1.5s infinite;
+    margin-bottom:15px;
+}
+
+@keyframes heartbeat{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.12);
+    }
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1{
+    color:#a13d5b;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+h2{
+    color:#a13d5b;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+    width:100%;
+    background:rgba(255,255,255,.86);
+    padding:35px 25px;
+    border-radius:28px;
+    box-shadow:
+        0 15px 40px rgba(110,40,70,.15);
+    backdrop-filter:blur(5px);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button{
+    border:none;
+    background:#d45476;
+    color:white;
+    padding:14px 27px;
+    margin:8px;
+    border-radius:30px;
+    font-family:inherit;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(120,40,70,.18);
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.02);
+    background:#bd4164;
+}
+
+.option{
+    display:block;
+    width:90%;
+    max-width:400px;
+    margin:13px auto;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.message{
+    display:none;
+    margin-top:20px;
+    color:#9d3555;
+    font-weight:bold;
+    line-height:1.6;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+    text-align:left;
+    background:#fffdf7;
+    border:1px solid #ead8c4;
+    padding:30px 25px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(80,50,30,.13);
+}
+
+.letter-top{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:18px;
+}
+
+.letter p{
+    color:#59423b;
+    line-height:1.9;
+}
+
+.signature{
+    text-align:right;
+    font-style:italic;
+    font-weight:bold;
+    margin-top:25px;
+}
+
+
+/* =========================
+   MEMORY
+========================= */
+
+.memory{
+    display:none;
+}
+
+.memory.active-memory{
+    display:block;
+    animation:pageIn .6s ease;
+}
+
+.memory img{
+    width:100%;
+    max-width:450px;
+    max-height:520px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 12px 35px rgba(70,30,50,.2);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.memory img:hover{
+    transform:scale(1.02);
+}
+
+.memory-number{
+    margin-top:12px;
+    font-size:14px;
+    opacity:.65;
+}
+
+.memory-msg{
+    display:none;
+    margin:20px auto 5px;
+    padding:22px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(80,40,60,.12);
+    animation:pageIn .5s ease;
+}
+
+.memory-msg p{
+    margin:0;
+    font-size:18px;
+    font-weight:bold;
+    color:#963b58;
+}
+
+.memory-next{
+    display:none;
+}
+
+
+/* =========================
+   SURPRISE
+========================= */
+
+.surprise-icon{
+    font-size:65px;
+    margin-bottom:15px;
+}
+
+
+/* =========================
+   FINAL LETTER
+========================= */
+
+.final-letter{
+    display:none;
+    margin-top:25px;
+    animation:pageIn .8s ease;
+}
+
+.final-letter .letter{
+    background:#fffef9;
+}
+
+.birthday{
+    margin-top:30px;
+    font-size:30px;
+    font-weight:bold;
+    color:#c33f67;
+    animation:dance 1s infinite;
+}
+
+@keyframes dance{
+
+    0%{
+        transform:rotate(-4deg) scale(1);
+    }
+
+    25%{
+        transform:rotate(4deg) scale(1.05);
+    }
+
+    50%{
+        transform:rotate(-4deg) scale(1.1);
+    }
+
+    75%{
+        transform:rotate(4deg) scale(1.05);
+    }
+
+    100%{
+        transform:rotate(-4deg) scale(1);
+    }
+
+}
+
+.birthday span{
+    display:inline-block;
+    animation:letterDance .8s infinite alternate;
+}
+
+@keyframes letterDance{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-8px);
+    }
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating{
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    animation:floatUp 6s linear forwards;
+    opacity:.65;
+    z-index:-1;
+}
+
+@keyframes floatUp{
+
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.7;
+    }
+
+    100%{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:500px){
+
+    h1{
+        font-size:27px;
+    }
+
+    h2{
+        font-size:23px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    .card{
+        padding:28px 18px;
+    }
+
+    .letter{
+        padding:25px 18px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- ==================================================
+     PAGE 1
+     OPENING
+================================================== -->
+
+<section id="page1" class="page active">
+
+<div class="card">
+
+<div class="big-heart">💗</div>
+
+<h1>Are you really excited?</h1>
+
+<p>
+Are you really excited to explore this...? ✨
+</p>
+
+<button onclick="excitedYes()">
+Yes, I am! 💕
+</button>
+
+<button onclick="excitedNo()">
+No 😶
+</button>
+
+<div id="excitedMessage" class="message"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 2
+     HAPPINESS QUESTION
+================================================== -->
+
+<section id="page2" class="page">
+
+<div class="card">
+
+<div class="big-heart">💖</div>
+
+<h2>Before exploring...</h2>
+
+<p>
+Before exploring first you have to answer this question.
+</p>
+
+<h2>
+How much are you happy when opening this? 💕
+</h2>
+
+<button class="option"
+onclick="happiness('lot')">
+Option 1 — A lot ❤️
+</button>
+
+<button class="option"
+onclick="happiness('normal')">
+Option 2 — Normal 🙂
+</button>
+
+<button class="option"
+onclick="happiness('no')">
+Option 3 — Not interested 😶
+</button>
+
+<div id="happyMessage" class="message"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 3
+     SMALL MESSAGE
+================================================== -->
+
+<section id="page3" class="page">
+
+<div class="card">
+
+<div class="big-heart">💌</div>
+
+<h2>You got a small message...</h2>
+
+<p>
+You got a small message from your loved one. ❤️
+</p>
+
+<p>
+There is something waiting for you inside...
+</p>
+
+<button onclick="goPage(4)">
+Tap here to open 💌
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 4
+     NANA LETTER
+================================================== -->
+
+<section id="page4" class="page">
+
+<div class="card">
+
+<h2>A Small Letter For You 💌</h2>
+
+<div class="letter">
+
+<div class="letter-top">
+💌
+</div>
+
+<p>
+Maaa....
+</p>
+
+<p>
+I know you since you are studying 9th class and I didn't even imagine this kind of bond will hold between us...
+</p>
+
+<p>
+And the main thing is only you because of you I changed my self and you only the reason behind my happiness..
+</p>
+
+<p>
+I am really sorry maa for what I did and hurting you....
+</p>
+
+<p>
+I am sure that you God gifted for me..
+</p>
+
+<p>
+I am really can't imagine what I am without you...
+</p>
+
+<p>
+I am sure I can't gift you what you deserve I think you deserve a big thing than this universe...
+</p>
+
+<p>
+On this priceless occasion I promise you I will there for you until my last breath....
+</p>
+
+<p class="signature">
+This is from your nana... ❤️
+</p>
+
+</div>
+
+<button onclick="goPage(5)">
+See what next? ✨
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 5
+     WHAT ARE YOU EXPECTING NEXT
+================================================== -->
+
+<section id="page5" class="page">
+
+<div class="card">
+
+<div class="big-heart">✨</div>
+
+<h2>What are you expecting next?</h2>
+
+<p>
+Choose carefully... 👀
+</p>
+
+<button class="option"
+onclick="expectNext('images')">
+Option 1 — Images 📸
+</button>
+
+<button class="option"
+onclick="expectNext('wrong')">
+Option 2 — Letter 💌
+</button>
+
+<button class="option"
+onclick="expectNext('wrong')">
+Option 3 — Don't want any more 😶
+</button>
+
+<div id="expectMessage" class="message"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 6
+     FOUR IMAGES
+================================================== -->
+
+<section id="page6" class="page">
+
+<div class="card">
+
+<h2>Some Little Memories 📸</h2>
+
+<p>
+Tap each picture to reveal its message. ❤️
+</p>
+
+
+<!-- ================= IMAGE 1 ================= -->
+
+<div id="memory1" class="memory active-memory">
+
+<img
+src="images/pic1.jpg"
+alt="Picture 1"
+onclick="openMemory(1)"
+>
+
+<div class="memory-number">
+Picture 1 of 4
+</div>
+
+<div id="msg1" class="memory-msg">
+
+<p>
+Be happy always and be strong forever. ❤️
+</p>
+
+</div>
+
+<button id="next1"
+class="memory-next"
+onclick="showMemory(2)">
+Next ➜
+</button>
+
+</div>
+
+
+
+<!-- ================= IMAGE 2 ================= -->
+
+<div id="memory2" class="memory">
+
+<img
+src="images/pic2.jpg"
+alt="Picture 2"
+onclick="openMemory(2)"
+>
+
+<div class="memory-number">
+Picture 2 of 4
+</div>
+
+<div id="msg2" class="memory-msg">
+
+<p>
+Your smile can make many faces smile. 😊❤️
+</p>
+
+</div>
+
+<button id="next2"
+class="memory-next"
+onclick="showMemory(3)">
+Next ➜
+</button>
+
+</div>
+
+
+
+<!-- ================= IMAGE 3 ================= -->
+
+<div id="memory3" class="memory">
+
+<img
+src="images/pic3.jpg"
+alt="Picture 3"
+onclick="openMemory(3)"
+>
+
+<div class="memory-number">
+Picture 3 of 4
+</div>
+
+<div id="msg3" class="memory-msg">
+
+<p>
+You deserve lot of happiness in this whole universe. 🌎❤️
+</p>
+
+</div>
+
+<button id="next3"
+class="memory-next"
+onclick="showMemory(4)">
+Next ➜
+</button>
+
+</div>
+
+
+
+<!-- ================= IMAGE 4 ================= -->
+
+<div id="memory4" class="memory">
+
+<img
+src="images/pic4.jpg"
+alt="Picture 4"
+onclick="openMemory(4)"
+>
+
+<div class="memory-number">
+Picture 4 of 4
+</div>
+
+<div id="msg4" class="memory-msg">
+
+<p>
+Wishing you to get what you want in life. ✨❤️
+</p>
+
+</div>
+
+<button id="next4"
+class="memory-next"
+onclick="goPage(7)">
+Go to Next Surprise 🎁
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 7
+     NEXT SURPRISE
+================================================== -->
+
+<section id="page7" class="page">
+
+<div class="card">
+
+<div class="surprise-icon">
+🎁
+</div>
+
+<h2>
+A Small Surprise Is Awaiting For You...
+</h2>
+
+<p>
+But you have to solve this puzzle first. 🧩
+</p>
+
+<button onclick="goPage(8)">
+Solve the Puzzle ➜
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 8
+     PUZZLE
+================================================== -->
+
+<section id="page8" class="page">
+
+<div class="card">
+
+<div class="big-heart">🧩</div>
+
+<h2>Question 1</h2>
+
+<p>
+What makes you more happy? 💗
+</p>
+
+<button class="option"
+onclick="puzzleAnswer()">
+Option 1 — Being alone
+</button>
+
+<button class="option"
+onclick="puzzleAnswer()">
+Option 2 — Being with friends
+</button>
+
+<button class="option"
+onclick="puzzleAnswer()">
+Option 3 — None
+</button>
+
+<button
+id="moveNext"
+style="display:none;"
+onclick="goPage(9)">
+Move to next ➜
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 9
+     FINAL TREASURE QUESTION
+================================================== -->
+
+<section id="page9" class="page">
+
+<div class="card">
+
+<div class="big-heart">🏆</div>
+
+<h2>Question 2</h2>
+
+<p>
+What do you think is the final treasure of this little surprise? 💭
+</p>
+
+<p>
+Take your guess... ❤️
+</p>
+
+<button class="option"
+onclick="finalQuestion()">
+My Answer 💗
+</button>
+
+<div id="finalQuestionMessage"
+class="message">
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 10
+     FINAL LETTER
+================================================== -->
+
+<section id="page10" class="page">
+
+<div class="card">
+
+<div class="big-heart">
+💝
+</div>
+
+<h2>
+The Final Treasure
+</h2>
+
+<button onclick="openFinalLetter()">
+Open the Final Surprise 💌
+</button>
+
+
+<div id="finalLetter"
+class="final-letter">
+
+<div class="letter">
+
+<div class="letter-top">
+💌
+</div>
+
+<p>
+Anjammaa....
+</p>
+
+<p>
+First of all wishing you a warm wishes and wishing you to get lot of happiness and fulfil all you dreams...
+</p>
+
+<p>
+From our side you are one of special person. You are not only just our friend you are some what different that you became like mom to us.
+</p>
+
+<p>
+Thank you so much just to make a lot of memories and that may memorable moments for our last min. We think only words can't describe your behaviour and the way you treat us...
+</p>
+
+<p>
+And finally we think you may fill happy when you see this....
+</p>
+
+<p>
+Eee link nuvu open chesina prathi sari nee face lo oka happiness raavali ani anukuntunnam.
+</p>
+
+<p>
+Thank you soo much anjammaaa....
+</p>
+
+<p class="signature">
+With lots of love ❤️
+</p>
+
+</div>
+
+
+<!-- FINAL BIRTHDAY WISH -->
+
+<div class="birthday">
+
+<span>H</span>
+<span>A</span>
+<span>P</span>
+<span>P</span>
+<span>Y</span>
+
+&nbsp;
+
+<span>B</span>
+<span>I</span>
+<span>R</span>
+<span>T</span>
+<span>H</span>
+<span>D</span>
+<span>A</span>
+<span>Y</span>
+
+&nbsp;🎂❤️
+
+</div>
+
+<div class="birthday"
+style="font-size:22px;margin-top:15px;">
+
+Once again... Happy Birthday Anjammaaa! 🎉💗
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</div>
+
+
+
+<script>
+
+/* =========================================
+   PAGE NAVIGATION
+========================================= */
+
+function goPage(number){
+
+    let pages =
+        document.querySelectorAll(".page");
+
+    pages.forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+    document
+        .getElementById("page"+number)
+        .classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+
+/* =========================================
+   PAGE 1
+========================================= */
+
+function excitedYes(){
+
+    let message =
+        document.getElementById("excitedMessage");
+
+    message.style.display="block";
+
+    message.innerHTML=
+        "We know you are excited! 💕✨";
+
+    setTimeout(function(){
+
+        goPage(2);
+
+    },1500);
+
+}
+
+
+function excitedNo(){
+
+    let message =
+        document.getElementById("excitedMessage");
+
+    message.style.display="block";
+
+    message.innerHTML=
+        "How dare you? 😤😂 Try again...";
+
+}
+
+
+
+/* =========================================
+   PAGE 2
+========================================= */
+
+function happiness(answer){
+
+    let message =
+        document.getElementById("happyMessage");
+
+    message.style.display="block";
+
+    if(answer==="lot"){
+
+        message.innerHTML=
+            "Awww... we knew it! ❤️ Let's continue...";
+
+        setTimeout(function(){
+
+            goPage(3);
+
+        },1500);
+
+    }
+
+    else{
+
+        message.innerHTML=
+            "This web was created by a lot of love on you but you are ignoring this... 🥺💔";
+
+    }
+
+}
+
+
+
+/* =========================================
+   PAGE 5
+========================================= */
+
+function expectNext(answer){
+
+    let message =
+        document.getElementById("expectMessage");
+
+    message.style.display="block";
+
+    if(answer==="images"){
+
+        message.innerHTML=
+            "Good choice! Let's see the memories... 📸❤️";
+
+        setTimeout(function(){
+
+            goPage(6);
+
+        },1200);
+
+    }
+
+    else{
+
+        message.innerHTML=
+            "Try again... 😌";
+
+    }
+
+}
+
+
+
+/* =========================================
+   MEMORY SYSTEM
+========================================= */
+
+function openMemory(number){
+
+    let message =
+        document.getElementById("msg"+number);
+
+    let next =
+        document.getElementById("next"+number);
+
+    message.style.display="block";
+
+    next.style.display="inline-block";
+
+}
+
+
+
+function showMemory(number){
+
+    let memories =
+        document.querySelectorAll(".memory");
+
+    memories.forEach(function(memory){
+
+        memory.classList.remove("active-memory");
+
+    });
+
+    document
+        .getElementById("memory"+number)
+        .classList.add("active-memory");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+
+/* =========================================
+   PUZZLE
+========================================= */
+
+function puzzleAnswer(){
+
+    document
+        .getElementById("moveNext")
+        .style.display="inline-block";
+
+}
+
+
+
+/* =========================================
+   FINAL QUESTION
+========================================= */
+
+function finalQuestion(){
+
+    let message =
+        document.getElementById("finalQuestionMessage");
+
+    message.style.display="block";
+
+    message.innerHTML=
+        "Maybe the final treasure is something you already have... ❤️";
+
+    setTimeout(function(){
+
+        goPage(10);
+
+    },1800);
+
+}
+
+
+
+/* =========================================
+   FINAL LETTER
+========================================= */
+
+function openFinalLetter(){
+
+    document
+        .getElementById("finalLetter")
+        .style.display="block";
+
+}
+
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+function createFloatingHeart(){
+
+    let heart =
+        document.createElement("div");
+
+    heart.className="floating";
+
+    let symbols=[
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "✨",
+        "🌸"
+    ];
+
+    heart.innerHTML=
+        symbols[
+            Math.floor(
+                Math.random()*symbols.length
+            )
+        ];
+
+    heart.style.left=
+        Math.random()*100+"vw";
+
+    heart.style.fontSize=
+        (15+Math.random()*15)+"px";
+
+    heart.style.animationDuration=
+        (4+Math.random()*4)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function(){
+
+        heart.remove();
+
+    },8000);
+
+}
+
+setInterval(
+    createFloatingHeart,
+    900
+);
+
+</script>
+
+</body>
+</html>
